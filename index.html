@@ -1,0 +1,170 @@
+
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#030303" />
+    <meta name="description" content="Маленькая вселенная, созданная для двоих." />
+    <title>Только мы — наша вселенная</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <canvas id="stars" aria-hidden="true"></canvas>
+
+    <div id="intro">
+      <button id="enter" aria-label="Войти на сайт">
+        нажми, чтобы войти<span>_</span>
+      </button>
+      <div class="intro-note">ЛИЧНАЯ ВСЕЛЕННАЯ · ТОЛЬКО ДЛЯ НАС</div>
+    </div>
+
+    <div id="app" class="is-hidden">
+      <header class="nav">
+        <a class="wordmark" href="#home">ТОЛЬКО МЫ<span>.</span></a>
+        <div class="nav-actions">
+          <a class="story-link" href="#her">Наша история <span>↗</span></a>
+          <button id="music-toggle" class="music-toggle">♫ <span>МУЗЫКА ВЫКЛ.</span></button>
+        </div>
+      </header>
+
+
+      <section id="her-page" class="her-page is-hidden" aria-label="Страница о любимой">
+        <div class="her-topline"><span>НАША ИСТОРИЯ</span><span>♡</span><span>ТОЛЬКО ДЛЯ ТЕБЯ</span></div>
+        <div class="her-content">
+          <p class="her-eyebrow">✦ НЕБОЛЬШОЕ НАПОМИНАНИЕ ДЛЯ ТЕБЯ ✦</p>
+          <h1>Моей <em>любимой</em>.</h1>
+          <p class="her-subtitle">Если вдруг забудешь, какая ты особенная, возвращайся сюда. ♡</p>
+          <div class="her-portrait">
+            <div class="her-frame"><img src="./images/lyubimaya.jpg" alt="Моя любимая девушка"></div>
+            <span class="her-heart her-heart-one">♡</span><span class="her-heart her-heart-two">✧</span><span class="her-heart her-heart-three">♡</span>
+          </div>
+          <p class="her-dedication">Самая прекрасная часть моего мира — ты.</p>
+          <div class="her-compliments">
+            <span>красивая <i>♡</i></span><span>нежная <i>✧</i></span><span>добрая <i>♡</i></span>
+            <span>любимая <i>✦</i></span><span>заботливая <i>♡</i></span><span>особенная <i>✧</i></span>
+            <span>милая <i>♡</i></span><span>искренняя <i>✦</i></span><span>неповторимая <i>♡</i></span>
+            <span>самая лучшая <i>✧</i></span><span>родная <i>♡</i></span><span>моё счастье <i>✧</i></span>
+          </div>
+          <div class="her-note"><span class="her-line"></span>
+            <p>Ты прекрасна не только внешне.<br>В тебе столько тепла, доброты и света,<br>что рядом с тобой мир становится лучше.</p>
+            <span class="her-signature">С любовью — всегда ♡</span><span class="her-line"></span>
+          </div>
+          <button id="back-to-story" class="her-back">← НАЗАД НА ГЛАВНУЮ</button>
+        </div>
+        <div class="her-footer">СОЗДАНО С ЛЮБОВЬЮ СПЕЦИАЛЬНО ДЛЯ ТЕБЯ ♡</div>
+      </section>
+
+      <main>
+        <section class="hero" id="home">
+          <div class="eyebrow"><i></i> ВСЕЛЕННАЯ ДЛЯ ДВОИХ</div>
+          <h1 class="hero-title">только ты и я.</h1>
+          <p class="hero-copy">
+            В этой огромной вселенной<br />
+            я нашёл самого дорогого человека.
+          </p>
+          <div class="now-playing">
+            <div class="equalizer"><i></i><i></i><i></i><i></i></div>
+            <span id="track-name">НАША ПЕСНЯ</span>
+          </div>
+          <a class="scroll-link" href="#about">ЛИСТАЙ НИЖЕ <span>↓</span></a>
+          <div class="hero-index">01 / ∞</div>
+        </section>
+
+        <section class="section about" id="about">
+          <div class="section-heading">
+            <span class="section-number">01</span>
+            <span class="section-label">НЕМНОГО О НАС</span>
+          </div>
+          <div class="terminal">
+            <div class="terminal-top">
+              <div class="window-dots"><i></i><i></i><i></i></div>
+              <span>our_story.exe</span>
+              <span class="terminal-live"><i></i> LIVE</span>
+            </div>
+            <div class="terminal-body">
+              <div class="terminal-prompt">мы@наша-вселенная:~$ <span>./our_story.sh</span></div>
+              <div id="terminal-output"></div>
+              <div class="terminal-cursor">_</div>
+            </div>
+          </div>
+          <p class="section-footnote">НЕКОТОРЫЕ ВЕЩИ ЛУЧШЕ ОСТАВИТЬ В НАШЕМ МАЛЕНЬКОМ МИРЕ.</p>
+        </section>
+
+        <section class="section memories" id="memories">
+          <div class="section-heading">
+            <span class="section-number">02</span>
+            <span class="section-label">МГНОВЕНИЯ НАВСЕГДА</span>
+          </div>
+          <div class="memories-intro">
+            <div>
+              <h2>Наши <span>воспоминания.</span></h2>
+              <p>Маленькие моменты. Бесконечный смысл.</p>
+            </div>
+            <div class="memory-count" id="photo-count">00 ФОТО</div>
+          </div>
+          <div class="memory-toolbar">
+            <button id="open-gallery" class="button-light">ОТКРЫТЬ НАШ МИР <span>↗</span></button>
+            <button id="add-photos" class="button-outline">+ ДОБАВИТЬ ФОТО</button>
+            <input id="photo-input" type="file" accept="image/*" multiple hidden />
+          </div>
+          <div id="gallery" class="gallery"></div>
+          <div id="gallery-empty" class="gallery-empty">
+            <div class="empty-symbol">✳</div>
+            <p>Наша история ждёт своих фотографий.</p>
+            <span>ДОБАВЬ ПЕРВОЕ ВОСПОМИНАНИЕ ВЫШЕ</span>
+          </div>
+        </section>
+
+        <section class="section soundtrack" id="soundtrack">
+          <div class="section-heading">
+            <span class="section-number">03</span>
+            <span class="section-label">ЗВУЧАНИЕ НАС</span>
+          </div>
+          <div class="soundtrack-layout">
+            <div>
+              <div class="vinyl"><div class="vinyl-center">♡</div></div>
+            </div>
+            <div class="soundtrack-copy">
+              <div class="eyebrow">НАШ ЛИЧНЫЙ САУНДТРЕК</div>
+              <h2>Некоторые песни<br />похожи на <span>тебя.</span></h2>
+              <p>Десять песен. Тысяча чувств. Каждый раз — маленький сюрприз.</p>
+              <button id="add-music" class="button-light">ВЫБРАТЬ НАШИ ПЕСНИ <span>↗</span></button>
+              <input id="music-input" type="file" accept="audio/*" multiple hidden />
+              <div id="music-status" class="music-status">ПОКА НЕТ ПЕСЕН · 0/10</div>
+              <div id="track-list" class="track-list"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="closing">
+          <div class="closing-star">✳</div>
+          <p>Из всех мест во Вселенной</p>
+          <h2>я всё равно выберу <span>тебя.</span></h2>
+          <div class="relationship-timer" aria-live="off">
+            <p class="relationship-label">МЫ ВМЕСТЕ С</p>
+            <time id="relationship-date" datetime="2026-10-21">21 октября 2026</time>
+            <div id="relationship-timer" class="timer-values" aria-label="Сколько мы вместе">
+              <span><strong id="timer-days">0</strong><small>дней</small></span>
+              <span><strong id="timer-hours">00</strong><small>часов</small></span>
+              <span><strong id="timer-minutes">00</strong><small>минут</small></span>
+              <span><strong id="timer-seconds">00</strong><small>секунд</small></span>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <span>ТОЛЬКО МЫ.</span>
+        <span>ИЗ МАЛЕНЬКИХ МОМЕНТОВ И БОЛЬШОЙ ЛЮБВИ ♡</span>
+        <a href="#home">НАВЕРХ ↑</a>
+      </footer>
+    </div>
+
+    <div id="toast" role="status" aria-live="polite"></div>
+    <audio id="audio" preload="none"></audio>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
