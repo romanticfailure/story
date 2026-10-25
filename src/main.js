@@ -419,7 +419,8 @@ function renderPhotos() {
   });
 
   $('#photo-count').textContent = `${String(photos.length).padStart(2, '0')} ФОТО`;
-  $('#gallery-empty').hidden = photos.length > 0;
+ const empty = $('#gallery-empty');
+if (empty) empty.hidden = photos.length > 0;
 }
 
 $('#add-photos').addEventListener('click', () => $('#photo-input').click());
