@@ -391,3 +391,32 @@ body.her-mode #app > #her-page { display:block !important; }
   background: #f1f0ed;
   border-radius: 1px;
 }
+/* Плавный кинематографичный переход с заставки */
+#intro {
+  transition:
+    opacity 1.7s cubic-bezier(0.22, 1, 0.36, 1),
+    visibility 1.7s ease,
+    filter 1.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+#intro.leaving {
+  filter: blur(6px);
+}
+
+/* Плавное появление главной страницы */
+#app {
+  transition:
+    opacity 1.8s cubic-bezier(0.22, 1, 0.36, 1),
+    translate 1.8s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 1.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+#app.is-hidden {
+  translate: 0 18px;
+  filter: blur(4px);
+}
+
+#app.is-visible {
+  translate: 0 0;
+  filter: blur(0);
+}
