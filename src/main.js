@@ -238,7 +238,11 @@ function renderTracks() {
 
     const play = document.createElement('button');
     play.className = 'track-play';
-    play.textContent = currentTrackId === track.id && !audio.paused ? 'Ⅱ' : '▶';
+   if (currentTrackId === track.id && !audio.paused) {
+  play.innerHTML = '<span class="pause-icon"><i></i><i></i></span>';
+} else {
+  play.textContent = '▶';
+}
     play.setAttribute('aria-label', `Включить ${track.name}`);
     play.addEventListener('click', () => playTrack(track.id));
 
