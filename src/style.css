@@ -370,3 +370,24 @@ body.her-mode #app > #her-page { display:block !important; }
 
 /* Requested: all highlighted heading words use the same white color. */
 .memories-intro h2 span, .soundtrack-copy h2 span, .closing h2 span { color: #f1f0ed !important; }
+.track-play {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 28px;
+  min-height: 28px;
+}
+
+.pause-icon {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.pause-icon i {
+  display: block;
+  width: 2px;
+  height: 12px;
+  background: #f1f0ed;
+  border-radius: 1px;
+}
